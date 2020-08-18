@@ -3,7 +3,7 @@ version: "2"
 services:
   sonarqube:
     container_name: sonarqube8.2
-    image: amd64/sonarqube
+    image: arm64v8/sonarqube
     ports:
       - "9001:9001"
     networks:
