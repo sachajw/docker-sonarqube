@@ -1,14 +1,11 @@
-version: "3"
+version: "2"
 
 services:
   sonarqube:
-    container_name: sonarqube
+    container_name: sonarqube 
     image: hub4rpi64/sonarqube:8.3.1.34397
-    ports: 
+    ports:
       - "9090:9090"
-    network_mode: bridge
-    environment:
-      ServerIP: '192.168.0.248'
     networks:
       - sonarnet
     volumes:
@@ -16,3 +13,13 @@ services:
       - sonarqube_extensions:/opt/sonarqube/extensions
       - sonarqube_logs:/opt/sonarqube/logs
       - sonarqube_temp:/opt/sonarqube/temp
+
+networks:
+  sonarnet:
+    driver: bridge
+
+volumes:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  sonarqube_temp:
