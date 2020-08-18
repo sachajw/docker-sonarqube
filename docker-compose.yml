@@ -5,7 +5,7 @@ services:
     container_name: sonarqube 
     image: hub4rpi64/sonarqube:8.3.1.34397
     ports:
-      - "9001:9001"
+      - "9090:9090"
     networks:
       - sonarnet
     volumes:
