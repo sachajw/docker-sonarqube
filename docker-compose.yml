@@ -3,7 +3,7 @@ version: "2"
 services:
   sonarqube:
     container_name: sonarqube 
-    image: hub4rpi64/baget:latest
+    image: hub4rpi64/sonarqube:latest
     ports:
       - "9001:9001"
     networks:
