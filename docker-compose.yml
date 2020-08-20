@@ -5,7 +5,7 @@ services:
     container_name: sonarqube
     image: hub4rpi64/sonarqube:8.3.1.34397
     ports: 
-      - "9090:9090"
+      - "9900:9900"
     network_mode: bridge
     environment:
       ServerIP: '192.168.0.248'
